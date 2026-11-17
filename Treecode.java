@@ -17,7 +17,7 @@ class Node {
 
 public class Treecode {
     
-    // 1. buildTree (النسخة الأبسط)
+    // 1. buildTree 
     public static Node buildTree(String postfix) {
         Stack<Node> s = new Stack<>();
         for (char c : postfix.toCharArray()) {
@@ -34,7 +34,7 @@ public class Treecode {
         return s.pop();
     }
     
-    // 2. evaluate (النسخة الأبسط)
+    // 2. evaluate
     public static int evaluate(Node root) {
         if (root.left == null && root.right == null) 
             return Integer.parseInt(root.value);
@@ -47,7 +47,7 @@ public class Treecode {
                root.value.equals("*") ? L * R : L / R;
     }
     
-    // 3. printInfix (النسخة الأبسط)
+    // 3. printInfix 
     public static void printInfix(Node root) {
         if (root == null) return;
         if (root.left != null) System.out.print("(");
